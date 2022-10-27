@@ -23,7 +23,7 @@ export default function GeneralLayout(props) {
           </Header>
           <Content className="layout-admin__content">{children}</Content>
           <Footer className="layout-admin__footer">
-          <Button type="link" onClick={event =>  window.location.href='https://github.com/SebastianEcheverryMejia/React-Practice-Client'}>
+          <Button type="link" onClick={event =>  window.location.href='https://github.com/SebastianEcheverryMejia/ERS-Parking-Client'}>
             <GithubOutlined style={{ fontSize: "17px" }} /> SebastianEcheverryMejia
           </Button>
         </Footer>

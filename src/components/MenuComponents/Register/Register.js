@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Checkbox, Select} from "antd";
-import { UserOutlined} from "@ant-design/icons";
+import { Form, Input, Button, Checkbox} from "antd";
+import { UserOutlined, IdcardOutlined, KeyOutlined, MailOutlined } from "@ant-design/icons";
 import "./Register.scss";
 
 export default function Register() {
   const [inputs, setInputs] = useState({
+    name: "",
+    lastname: "",
+    document: "",
     email: "",
     password: "",
     repeatPassword: "",
@@ -30,6 +33,36 @@ export default function Register() {
       <Form.Item>
         <Input
           prefix={<UserOutlined />}
+          type="text"
+          name="name"
+          placeholder="Nombre"
+          className="register-form__input"
+          value={inputs.name}
+        />
+      </Form.Item>
+      <Form.Item>
+        <Input
+          prefix={<UserOutlined />}
+          type="text"
+          name="lastname"
+          placeholder="Apellidos"
+          className="register-form__input"
+          value={inputs.lastname}
+        />
+      </Form.Item>
+      <Form.Item>
+        <Input
+          prefix={<IdcardOutlined />}
+          type="number"
+          name="document"
+          placeholder="Documento"
+          className="register-form__input"
+          value={inputs.name}
+        />
+      </Form.Item>
+      <Form.Item>
+        <Input
+          prefix={<MailOutlined />}
           type="email"
           name="email"
           placeholder="Correo electronico"
@@ -39,7 +72,7 @@ export default function Register() {
       </Form.Item>
       <Form.Item>
         <Input
-          prefix={<UserOutlined />}
+          prefix={<KeyOutlined />}
           type="password"
           name="password"
           placeholder="Contraseña"
@@ -49,7 +82,7 @@ export default function Register() {
       </Form.Item>
       <Form.Item>
         <Input
-          prefix={<UserOutlined />}
+          prefix={<KeyOutlined />}
           type="password"
           name="repeatPassword"
           placeholder="Repetir contraseña"
