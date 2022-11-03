@@ -24,7 +24,7 @@ export default function MenuSider(props) {
           </Link>
         </Menu.Item>
         <Menu.Item key="3">
-          <Link to={"/admin/contact"}>
+          <Link to={"/contact"}>
             <PhoneOutlined />
             <span className="nav-text">Contact</span>
           </Link>
